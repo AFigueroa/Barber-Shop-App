@@ -1,0 +1,31 @@
+<% include header %>
+
+<!--		
+====================================
+ 			Dashboard
+=====================================
+-->			
+<div class="row">
+	<div class="small-12 columns">
+		<p> </p>
+	</div>
+	<div class="small-12 columns">
+		<h1 class="text-center">Welcome <%=fname%></h1>
+	</div>
+	<div class="small-12 columns">
+		<p class="text-center">
+			What would you like to do?
+		</p>
+	</div>
+	<div class="small-6 columns">
+		<div class="small-12 columns">
+		<a href="/appointments/show?userId=<%=userId%>" class="button [radius round] right">View Appointments</a>
+		</div>					</div>
+	<div class="small-6 columns">
+		<div class="small-12 columns">
+		<a href="/appointments/create" id="video_button" class="button [radius round] left">Make Appointment</a>
+		</div>
+	</div>
+</div>
+
+<% include footer  %>

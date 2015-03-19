@@ -1,0 +1,33 @@
+<% include header %>
+<!--		
+====================================
+ 	      User Appointments
+=====================================
+-->			
+<div class="row">
+	<div class="small-12 columns">
+		<p> </p>
+	</div>
+	<div class="small-12 columns">
+		<h1 class="text-center">Active Appointments</h1>
+	</div>
+	<% if (apps.length === 0){ %>
+	<div class="small-12 columns">
+		<p class="text-center"> </p>
+		<h6 class="text-center">You have no appointments. Please add one below...</h6>
+		<a href="/appointments/create" class="small-12 columns submit button [radius round]">Make Appointment</a>
+	</div>
+	<% } else {	%>
+		<% for(var i=0; i<apps.length; i++){ %>
+			<fieldset class="small-12 columns">
+				<h4 class="text-center"><%=apps[i]['date']%> <%=apps[i]['time']%></h4>
+				<form action="/appointments/delete" method="POST">
+					<input type="hidden" value="<%=apps[i]['_id']%>" name="appId">
+					<input class="small-12 columns submit button [radius round]" value="Delete" type="submit" id="delete">
+				</form>
+			</fieldset>	
+		<% } %>
+	<% } %>
+	
+</div>
+<% include footer %>

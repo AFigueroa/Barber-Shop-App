@@ -1,0 +1,107 @@
+<% include header %>
+<!--		
+====================================
+ 			Home Page
+=====================================
+-->			
+<div class="row">
+	<div class="small-12 columns">
+		<p> </p>
+	</div>
+	<div class="small-12 columns">
+		<h1 class="text-center">Appointments</h1>
+	</div>
+</div>
+
+<!--		
+====================================
+ Second Row: Available Today 
+=====================================
+-->		
+<div class="row">
+	<div class="small-12 columns">
+		<ul class="example-orbit-content" data-orbit>
+			<li>
+				<table>
+					<tr>
+						<th class="text-center">Barber</th>
+						<th class="text-center">9:00am</th>
+						<th class="text-center">9:30am</th>
+						<th class="text-center">10:00am</th>
+						<th class="text-center">10:30am</th>
+					</tr>
+					<% for (i=0; i<barbers.length; i++){ %>
+						<tr>
+							<td class="text-center"><%=barbers[i][0]%></td>
+							<td class="text-center"><%=calendar['am900'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['am930'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['am1000'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['am1030'][barbers[i][0]]%></td>
+						</tr>
+					<% } %>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<th class="text-center">Barber</th>
+						<th class="text-center">11:00am</th>
+						<th class="text-center">11:30am</th>
+						<th class="text-center">1:00pm</th>
+						<th class="text-center">1:30pm</th>
+					</tr>
+					<% for (i=0; i<barbers.length; i++){ %>
+						<tr>
+							<td class="text-center"><%=barbers[i][0]%></td>
+							<td class="text-center"><%=calendar['am1100'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['am1130'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['pm100'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['pm130'][barbers[i][0]]%></td>
+						</tr>
+					<% } %>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<th class="text-center">Barber</th>
+						<th class="text-center">2:00pm</th>
+						<th class="text-center">2:30pm</th>
+						<th class="text-center">3:00pm</th>
+						<th class="text-center">3:30pm</th>
+					</tr>
+					<% for (i=0; i<barbers.length; i++){ %>
+						<tr>
+							<td class="text-center"><%=barbers[i][0]%></td>
+							<td class="text-center"><%=calendar['pm200'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['pm230'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['pm300'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['pm330'][barbers[i][0]]%></td>
+						</tr>
+					<% } %>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<th class="text-center">Barber</th>
+						<th class="text-center">4:00pm</th>
+						<th class="text-center">4:30pm</th>
+						<th class="text-center">5:00pm</th>
+						<th class="text-center">5:30pm</th>
+					</tr>
+					<% for (i=0; i<barbers.length; i++){ %>
+						<tr>
+							<td class="text-center"><%=barbers[i][0]%></td>
+							<td class="text-center"><%=calendar['pm400'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['pm430'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['pm500'][barbers[i][0]]%></td>
+							<td class="text-center"><%=calendar['pm530'][barbers[i][0]]%></td>
+						</tr>
+					<% } %>
+				</table>
+			</li>
+		</ul>	
+	</div>
+</div>
+<% include footer %>

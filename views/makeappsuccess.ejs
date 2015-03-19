@@ -1,0 +1,30 @@
+<% include header %>
+<!--		
+	====================================
+		 Create Appointment Success
+	=====================================
+-->			
+<div class="row">
+	<div class="small-12 columns">
+		<p> </p>
+	</div>
+	<div class="small-12 columns">
+		<h1 class="text-center">You are Booked</h1>
+	</div>
+	<div class="small-12 columns">
+		<p class="text-center">
+			We'll be expecting you 15min before your appointment.
+		</p>
+	</div>
+	<div class="small-6 columns">
+		<div class="small-12 columns">
+			<a href="/users/dashboard" id="video_button" class="button [radius round] right">Dashboard</a>
+		</div>					
+	</div>
+	<div class="small-6 columns">
+		<div class="small-12 columns">
+			<a href="/appointments/show?userId=<%=userId%>" class="button [radius round] left">View Appointment</a>
+		</div>
+	</div>
+</div>
+<% include footer %>

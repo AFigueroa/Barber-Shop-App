@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+<head>
+	
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  <title><%= title %></title>
+	
+  <link rel="stylesheet" href="/css/normalize.css"><!-- Normalize.CSS-->
+  <link rel="stylesheet" href="/css/foundation.min.css"><!-- Foundation.min.CSS-->
+  <link rel="stylesheet" href="/css/custom.css"><!-- Custom.CSS-->
+	
+  <script src="/js/vendor/modernizr.js"></script><!-- Modernizr.JS-->
+	
+</head><!-- End of Head -->
+
+<!-- 
+Off-Canvas Wrap
+-->
+<div class="off-canvas-wrap" data-offcanvas>
+<!--	
+	Inner Wrap
+-->
+	<div class="inner-wrap fixed">
+		
+<!--====================================
+		BEGINING OF NAVIGATION 
+=====================================-->
+		<nav class="tab-bar">
+<!--	
+			Top Nav Left Section
+-->
+			<section class="left-small">
+<!--			<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>-->
+			</section>
+<!--	
+			Top Nav Middle Section
+-->
+			<section class="middle tab-bar-section">
+				<h1 class="title"><%= title %></h1>
+			</section>
+<!--	
+			Top Nav Right Section
+-->
+			<section class="right-small">
+				<a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+			</section>
+		</nav>
+
+<!--	
+		Right Off-Canvas Content Here
+-->
+		<aside class="right-off-canvas-menu">
+			<ul class="off-canvas-list">
+<!--				<li><label>Users</label></li>-->
+				<li><a href="/">Home</a></li>
+				<li><a href="/appointments/calendar">Calendar</a></li>
+				<% if (logged===1) { %>
+					<li><a href="/users/dashboard">Dashboard</a></li>
+					<li><a href="/appointments/show?userId=<%=userId%>">Appointments</a></li>
+					<li><a href="/users/logout">Logout</a></li>		
+				<% } else { %>
+					<li><a href="/users/login">Login</a></li>
+					<li><a href="/users/signup">Create Account</a></li>
+				<% } %>
+			</ul>
+		</aside>
+		
+<!--====================================
+		BEGINING OF MAIN SECTION
+=====================================-->
+<section class="main-section">
+	<body>

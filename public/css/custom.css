@@ -1,0 +1,24 @@
+#video_button{
+	background-color: grey;
+}
+.submit{
+	background-color: #3aa3ff;
+	height: 45px;
+	color: white;
+}
+#white{
+	color: white;
+}
+#delete:hover{
+	background-color:#a22e2e;
+	
+}
+.orbit-prev{
+
+	z-index: 1;
+	position: relative;
+}
+.orbit-prev:hover{
+	background-color: blue;
+}
+.orbit-next{}
