@@ -13,16 +13,22 @@
     "cookie-parser": "^1.3.3",
     "cookie-session": "*",
     "ejs": "*",
-    "express": "~4.0.0",
+    "express": "~4.16.0",
     "express-session": "*",
     "hashids": "*",
     "moment": "^2.8.3",
     "mongojs": "*",
     "node-uuid": "*",
     "passport": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "snyk": "^1.42.3"
   },
   "devDependencies": {
     "mocha": "*"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
